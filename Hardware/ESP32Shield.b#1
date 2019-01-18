@@ -4367,10 +4367,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="J2" pad="2"/>
 <contactref element="D4" pad="A"/>
 <wire x1="41.275" y1="52.705" x2="39.116" y2="52.705" width="0.2032" layer="16"/>
-<wire x1="33.782" y1="58.039" x2="26.67" y2="58.039" width="0.2032" layer="16"/>
-<via x="26.67" y="58.039" extent="1-16" drill="0.381"/>
-<wire x1="26.67" y1="58.039" x2="26.67" y2="57.03" width="0.2032" layer="1"/>
-<wire x1="39.116" y1="52.705" x2="33.782" y2="58.039" width="0.2032" layer="16"/>
+<wire x1="33.147" y1="58.674" x2="26.67" y2="58.674" width="0.2032" layer="16"/>
+<via x="26.67" y="58.674" extent="1-16" drill="0.381"/>
+<wire x1="26.67" y1="58.674" x2="26.67" y2="57.03" width="0.2032" layer="1"/>
+<wire x1="39.116" y1="52.705" x2="33.147" y2="58.674" width="0.2032" layer="16"/>
 </signal>
 <signal name="N$9">
 <contactref element="J3" pad="2"/>

@@ -3872,15 +3872,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="U$14" library="buzzard_labels (5)" package="DMX_TO_LED_SHIELD7" value="" x="32.512" y="66.04" rot="MR0"/>
 <element name="U$15" library="buzzard_labels (6)" package="5V7" value="" x="14.859" y="48.768"/>
 <element name="U$17" library="buzzard_labels (6)" package="5V7" value="" x="14.859" y="10.668"/>
-<element name="U$18" library="buzzard_labels (6)" package="C01" value="" x="14.986" y="52.832"/>
-<element name="U$19" library="buzzard_labels (6)" package="D00" value="" x="14.986" y="57.658"/>
+<element name="U$18" library="buzzard_labels (6)" package="C01" value="" x="14.986" y="14.732"/>
+<element name="U$19" library="buzzard_labels (6)" package="D00" value="" x="14.986" y="19.558"/>
 <element name="U$20" library="buzzard_labels (6)" package="G8" value="" x="14.986" y="61.722"/>
 <element name="U$21" library="buzzard_labels (6)" package="5V7" value="" x="14.859" y="29.718"/>
 <element name="U$22" library="buzzard_labels (6)" package="C12" value="" x="14.986" y="33.782"/>
 <element name="U$23" library="buzzard_labels (6)" package="D16" value="" x="14.986" y="38.608"/>
 <element name="U$24" library="buzzard_labels (6)" package="G8" value="" x="14.986" y="42.672"/>
-<element name="U$26" library="buzzard_labels (6)" package="C24" value="" x="14.986" y="14.732"/>
-<element name="U$27" library="buzzard_labels (6)" package="D23" value="" x="14.986" y="19.558"/>
+<element name="U$26" library="buzzard_labels (6)" package="C24" value="" x="14.986" y="52.832"/>
+<element name="U$27" library="buzzard_labels (6)" package="D23" value="" x="14.986" y="57.658"/>
 <element name="U$28" library="buzzard_labels (6)" package="G8" value="" x="14.986" y="23.622"/>
 <element name="LOGO1" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_FLAME_.1" value="SFE_LOGO_NAME_FLAME.1_INCH" x="21.59" y="34.29" rot="R270"/>
 <element name="LOGO2" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_FLAME_.1" value="SFE_LOGO_NAME_FLAME.1_INCH" x="30.48" y="45.72" rot="MR0"/>
