@@ -2,7 +2,6 @@
 #include <WiFiUdp.h>
 #include <ArtnetWifi.h>
 #include <FastLED.h>
-#include <LXESP32DMX.h> //https://github.com/claudeheintz/LXESP32DMX
 
 //Wifi settings
 char ssid[] = "myDMX";
@@ -13,15 +12,13 @@ IPAddress subnet(255, 255, 255, 0);
 
 // Artnet settings
 ArtnetWifi artnet;
-const int startUniverse = 0;
-const int endUniverse = 1;
 
 bool sendFrame = 1;
 int previousDataLength = 0;
 
 //Pin Definitions for Shield
-#define RX 16
-#define TX 17
+#define TX 16
+#define RX 17
 #define EN 21
 #define LED_DATA1 27
 #define LED_DATA2 18
@@ -30,14 +27,16 @@ int previousDataLength = 0;
 
 //LED String Definitions
 #define NUM_LEDS1 0
-#define NUM_LEDS2 192
+#define NUM_LEDS2 256
 #define NUM_LEDS3 0
 #define TOTAL_LEDS NUM_LEDS1 + NUM_LEDS2 + NUM_LEDS3
+#define MAX_LEDS_PER_UNIVERSE 170
 CRGB ledString1[NUM_LEDS1];
 CRGB ledString2[NUM_LEDS2];
 CRGB ledString3[NUM_LEDS3];
 
-uint8_t hue = 0;
+const int startUniverse = 0;
+const int endUniverse = startUniverse + (TOTAL_LEDS / MAX_LEDS_PER_UNIVERSE);
 
 boolean connectWifi(void)
 {
@@ -47,29 +46,11 @@ boolean connectWifi(void)
   return state;
 }
 
-void beginXLROut()
-{
-  pinMode(EN, OUTPUT);
-  digitalWrite(EN, HIGH);
-
-  pinMode(TX, OUTPUT);
-  ESP32DMX.startOutput(TX);
-}
-
-//Beginning XLR Input will mean that the output will simply be a throughput
-void beginXLRIn()
-{
-  pinMode(EN, OUTPUT);
-  digitalWrite(EN, LOW);
-
-  pinMode(RX, INPUT);
-  ESP32DMX.startInput(RX);
-}
-
+//onDmxFrame is called every time we receive a DMX packet.
 void onDmxFrame(uint16_t universe, uint16_t length, uint8_t sequence, uint8_t* data)
 {
   sendFrame = 1;
-  // set brightness of the whole strip
+  // set global brightness
   if (universe == 15)
   {
     FastLED.setBrightness(data[0]);
@@ -77,7 +58,7 @@ void onDmxFrame(uint16_t universe, uint16_t length, uint8_t sequence, uint8_t* d
   // read universe and put into the right part of the display buffer
   for (int i = 0; i < length / 3; i++)
   {
-    int led = i + (universe - startUniverse) * (previousDataLength / 3);
+    int led = i + (universe - startUniverse) * (previousDataLength / 3); //Calculate which LED we will be writing to based on where we are in our data
     if (led < NUM_LEDS1)
     {
       ledString1[led] = CRGB(data[i * 3], data[i * 3 + 1], data[i * 3 + 2]);
@@ -92,36 +73,10 @@ void onDmxFrame(uint16_t universe, uint16_t length, uint8_t sequence, uint8_t* d
     }
   }
   previousDataLength = length;
-  if (universe == endUniverse)
+  if (universe == endUniverse) //If we've received all our data, show it on the LED's
   {
     FastLED.show();
   }
-}
-
-void copyDMXToOutput(void) {
-  xSemaphoreTake( ESP32DMX.lxDataLock, portMAX_DELAY );
-  for (int i = 1; i < DMX_MAX_FRAME; i++) {
-    ESP32DMX.setSlot(i , dmxbuffer[i]);
-  }
-  xSemaphoreGive( ESP32DMX.lxDataLock );
-}
-
-void artnetToXLR (uint16_t universe, uint16_t length, uint8_t sequence, uint8_t* data)
-{
-  //add in a check for universe number, have a dedicated XLR universe since our device can handle multiple universes
-  uint8_t dmxBuffer[DMX_MAX_FRAME];
-  sendFrame = 1;
-  for (int i = 0; i < length; i++)
-  {
-    dmxBuffer[i] = data[i];
-  }
-  previousDataLength = length;
-}
-
-void writeChannel(uint16_t channel, uint8_t value)
-{
-    uint8_t dmxBuffer[DMX_MAX_FRAME];
-    dmxBuffer[channel] = value;
 }
 
 void setup() {
@@ -129,13 +84,12 @@ void setup() {
   if (connectWifi())
   {
     Serial.println("Connected!");
-    //Serial.println(WiFi.softAPIP());
   }
 
   //LED Initialization
   if (NUM_LEDS1 != 0)
   {
-    FastLED.addLeds<WS2812, LED_DATA1, BGR>(ledString3, NUM_LEDS3);
+    FastLED.addLeds<WS2812, LED_DATA1, BGR>(ledString1, NUM_LEDS3);
   }
   if (NUM_LEDS2 != 0)
   {
@@ -143,9 +97,8 @@ void setup() {
   }
   if (NUM_LEDS3 != 0)
   {
-    FastLED.addLeds<APA102, LED_DATA3, LED_CLOCK, BGR>(ledString1, NUM_LEDS1);
+    FastLED.addLeds<APA102, LED_DATA3, LED_CLOCK, BGR>(ledString3, NUM_LEDS1);
   }
-  FastLED.setBrightness(32);
   artnet.begin();
   artnet.setArtDmxCallback(onDmxFrame);
 }
