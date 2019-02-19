@@ -1,7 +1,7 @@
 #include <LXESP32DMX.h>
 #include "esp_task_wdt.h"
 
-uint8_t level;
+uint8_t level = 0;
 uint8_t dmxBuffer[DMX_MAX_FRAME];
 
 //Pin Definitions for Shield
@@ -26,10 +26,12 @@ void setup() {
 }
 
 void loop() {
-  for (int channel = 0; channel < 3; channel++)
+  for (int channel = 1; channel < 512; channel++)
   {
-    dmxBuffer[channel] = level;
+    dmxBuffer[channel] = channel;
   }
-  level++;
+  //level++;
   writeDMXToOutput();
+  esp_task_wdt_feed();
+  vTaskDelay(100);
 }
