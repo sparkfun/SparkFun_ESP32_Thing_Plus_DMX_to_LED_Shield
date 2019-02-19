@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.05" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -18337,9 +18337,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;ul&gt;&lt;li&gt;TXB0104PWR&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;</description>
 <wire x1="-2.5146" y1="-2.2828" x2="2.5146" y2="-2.2828" width="0.1524" layer="51"/>
-<wire x1="2.5146" y1="2.2828" x2="2.5146" y2="-2.2828" width="0.1524" layer="21"/>
+<wire x1="2.5146" y1="2.2828" x2="2.5146" y2="-2.2828" width="0.2032" layer="21"/>
 <wire x1="2.5146" y1="2.2828" x2="-2.5146" y2="2.2828" width="0.1524" layer="51"/>
-<wire x1="-2.5146" y1="-2.2828" x2="-2.5146" y2="2.2828" width="0.1524" layer="21"/>
+<wire x1="-2.5146" y1="-2.2828" x2="-2.5146" y2="2.2828" width="0.2032" layer="21"/>
 <circle x="-1.6256" y="-1.2192" radius="0.254" width="0" layer="21"/>
 <smd name="1" x="-1.95" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
 <smd name="2" x="-1.3" y="-2.9178" dx="0.3048" dy="0.9906" layer="1"/>
@@ -19437,7 +19437,7 @@ a DMX chain</text>
 <instance part="FRAME1" gate="V" x="147.32" y="0"/>
 <instance part="J1" gate="G$1" x="26.67" y="152.4"/>
 <instance part="J7" gate="G$1" x="26.67" y="157.48" rot="MR0"/>
-<instance part="SUPPLY7" gate="G$1" x="13.97" y="172.72"/>
+<instance part="SUPPLY7" gate="G$1" x="13.97" y="177.8"/>
 <instance part="SUPPLY8" gate="G$1" x="49.53" y="137.16"/>
 <instance part="U3" gate="G$1" x="154.94" y="124.46" rot="MR0"/>
 <instance part="U4" gate="G$1" x="152.4" y="96.52"/>
@@ -19448,8 +19448,8 @@ a DMX chain</text>
 <instance part="R3" gate="G$1" x="226.06" y="83.82" rot="R90"/>
 <instance part="U6" gate="G$1" x="180.34" y="160.02"/>
 <instance part="SUPPLY1" gate="G$1" x="165.1" y="172.72"/>
-<instance part="GND1" gate="1" x="165.1" y="142.24"/>
-<instance part="GND-ISO1" gate="G$1" x="195.58" y="142.24"/>
+<instance part="GND1" gate="1" x="165.1" y="147.32"/>
+<instance part="GND-ISO1" gate="G$1" x="195.58" y="147.32"/>
 <instance part="U$5" gate="G$1" x="195.58" y="172.72"/>
 <instance part="C1" gate="G$1" x="154.94" y="162.56"/>
 <instance part="C2" gate="G$1" x="200.66" y="162.56"/>
@@ -19502,17 +19502,17 @@ a DMX chain</text>
 <instance part="FD2" gate="G$1" x="238.76" y="17.78"/>
 <instance part="FD3" gate="G$1" x="241.3" y="17.78"/>
 <instance part="FD4" gate="G$1" x="243.84" y="17.78"/>
-<instance part="TP1" gate="G$1" x="71.12" y="99.06" smashed="yes" rot="R90">
-<attribute name="NAME" x="71.12" y="96.52" size="1.778" layer="95" font="vector" rot="R90"/>
+<instance part="TP1" gate="G$1" x="71.12" y="101.6" smashed="yes" rot="R90">
+<attribute name="NAME" x="71.12" y="99.06" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP2" gate="G$1" x="73.66" y="99.06" smashed="yes" rot="R90">
-<attribute name="NAME" x="73.66" y="96.52" size="1.778" layer="95" font="vector" rot="R90"/>
+<instance part="TP2" gate="G$1" x="73.66" y="101.6" smashed="yes" rot="R90">
+<attribute name="NAME" x="73.66" y="99.06" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP3" gate="G$1" x="76.2" y="99.06" smashed="yes" rot="R90">
-<attribute name="NAME" x="76.2" y="96.52" size="1.778" layer="95" font="vector" rot="R90"/>
+<instance part="TP3" gate="G$1" x="76.2" y="101.6" smashed="yes" rot="R90">
+<attribute name="NAME" x="76.2" y="99.06" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP4" gate="G$1" x="78.74" y="99.06" smashed="yes" rot="R90">
-<attribute name="NAME" x="78.74" y="96.52" size="1.778" layer="95" font="vector" rot="R90"/>
+<instance part="TP4" gate="G$1" x="78.74" y="101.6" smashed="yes" rot="R90">
+<attribute name="NAME" x="78.74" y="99.06" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
 <instance part="SUPPLY12" gate="G$1" x="142.24" y="132.08"/>
 <instance part="SUPPLY13" gate="G$1" x="137.16" y="104.14"/>
@@ -19538,7 +19538,7 @@ a DMX chain</text>
 <pinref part="GND1" gate="1" pin="GND"/>
 <junction x="165.1" y="157.48"/>
 <pinref part="J12" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="144.78" x2="165.1" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="149.86" x2="165.1" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="162.56" x2="149.86" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="162.56" x2="149.86" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="157.48" x2="154.94" y2="157.48" width="0.1524" layer="91"/>
@@ -19578,7 +19578,7 @@ a DMX chain</text>
 <segment>
 <pinref part="J7" gate="G$1" pin="3"/>
 <wire x1="16.51" y1="147.32" x2="13.97" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="13.97" y1="147.32" x2="13.97" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="13.97" y1="147.32" x2="13.97" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="G$1" pin="5V"/>
 </segment>
 <segment>
@@ -19873,7 +19873,7 @@ a DMX chain</text>
 <pinref part="GND-ISO1" gate="G$1" pin="GND-ISO"/>
 <junction x="195.58" y="157.48"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="195.58" y1="144.78" x2="195.58" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="149.86" x2="195.58" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="157.48" x2="200.66" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="200.66" y1="157.48" x2="200.66" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="200.66" y1="157.48" x2="210.82" y2="157.48" width="0.1524" layer="91"/>
@@ -20110,7 +20110,7 @@ a DMX chain</text>
 <wire x1="68.58" y1="93.98" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
 <label x="81.28" y="93.98" size="1.27" layer="95" font="vector" xref="yes"/>
 <wire x1="73.66" y1="93.98" x2="81.28" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="93.98" x2="73.66" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="93.98" x2="73.66" y2="101.6" width="0.1524" layer="91"/>
 <junction x="73.66" y="93.98"/>
 <pinref part="TP2" gate="G$1" pin="1"/>
 </segment>
@@ -20126,7 +20126,7 @@ a DMX chain</text>
 <wire x1="68.58" y1="91.44" x2="76.2" y2="91.44" width="0.1524" layer="91"/>
 <label x="81.28" y="91.44" size="1.27" layer="95" font="vector" xref="yes"/>
 <wire x1="76.2" y1="91.44" x2="81.28" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="91.44" x2="76.2" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="91.44" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
 <junction x="76.2" y="91.44"/>
 <pinref part="TP3" gate="G$1" pin="1"/>
 </segment>
@@ -20142,7 +20142,7 @@ a DMX chain</text>
 <wire x1="68.58" y1="96.52" x2="71.12" y2="96.52" width="0.1524" layer="91"/>
 <label x="81.28" y="96.52" size="1.27" layer="95" font="vector" xref="yes"/>
 <wire x1="71.12" y1="96.52" x2="81.28" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="96.52" x2="71.12" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="96.52" x2="71.12" y2="101.6" width="0.1524" layer="91"/>
 <junction x="71.12" y="96.52"/>
 <pinref part="TP1" gate="G$1" pin="1"/>
 </segment>
@@ -20168,7 +20168,7 @@ a DMX chain</text>
 <wire x1="68.58" y1="88.9" x2="78.74" y2="88.9" width="0.1524" layer="91"/>
 <label x="81.28" y="88.9" size="1.27" layer="95" font="vector" xref="yes"/>
 <wire x1="78.74" y1="88.9" x2="81.28" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="88.9" x2="78.74" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="88.9" x2="78.74" y2="101.6" width="0.1524" layer="91"/>
 <junction x="78.74" y="88.9"/>
 <pinref part="TP4" gate="G$1" pin="1"/>
 </segment>

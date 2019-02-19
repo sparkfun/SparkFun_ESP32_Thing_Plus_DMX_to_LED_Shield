@@ -167,10 +167,6 @@
 <dimension x1="60.96" y1="68.58" x2="0" y2="68.58" x3="30.48" y3="72.39" textsize="1.778" layer="47" unit="inch"/>
 <dimension x1="60.96" y1="68.58" x2="60.96" y2="0" x3="-5.08" y3="34.29" textsize="1.778" layer="47" unit="inch"/>
 <text x="60.452" y="0.381" size="1.27" layer="16" font="vector" ratio="15" rot="MR0">v01</text>
-<text x="57.15" y="57.15" size="1.27" layer="16" font="vector" ratio="15" rot="MR90" align="center">Stop, 
-Drop, 
-Shut 'em down, 
-Open up shop</text>
 <dimension x1="2.54" y1="2.54" x2="2.54" y2="66.04" x3="-2.54" y3="34.29" textsize="1.778" layer="47" unit="inch"/>
 <dimension x1="2.54" y1="66.04" x2="58.42" y2="66.04" x3="30.48" y3="69.85" textsize="1.778" layer="47" unit="inch"/>
 </plain>
@@ -1017,6 +1013,23 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-5.08" y="19.05" size="1.27" layer="25" font="vector">&gt;NAME</text>
 <text x="-5.08" y="-8.89" size="1.27" layer="27" font="vector">&gt;VALUE</text>
 <rectangle x1="-11" y1="12.6" x2="11" y2="15.5" layer="51"/>
+<wire x1="3.81" y1="-1.27" x2="3.81" y2="12.7" width="0.2032" layer="39"/>
+<wire x1="3.81" y1="12.7" x2="-12.7" y2="12.7" width="0.2032" layer="39"/>
+<wire x1="-12.7" y1="12.7" x2="-12.7" y2="6.35" width="0.2032" layer="39"/>
+<wire x1="-12.7" y1="6.35" x2="-10.16" y2="6.35" width="0.2032" layer="39"/>
+<wire x1="-10.16" y1="6.35" x2="-10.16" y2="-2.54" width="0.2032" layer="39"/>
+<wire x1="-10.16" y1="-2.54" x2="-1.27" y2="-2.54" width="0.2032" layer="39"/>
+<wire x1="-1.27" y1="-2.54" x2="-1.27" y2="-3.81" width="0.2032" layer="39"/>
+<wire x1="-1.27" y1="-3.81" x2="1.27" y2="-3.81" width="0.2032" layer="39"/>
+<wire x1="1.27" y1="-3.81" x2="1.27" y2="-1.27" width="0.2032" layer="39"/>
+<wire x1="1.27" y1="-1.27" x2="3.81" y2="-1.27" width="0.2032" layer="39"/>
+<wire x1="-10.922" y1="12.7" x2="-10.922" y2="1.27" width="0.2032" layer="51"/>
+<wire x1="-10.922" y1="1.27" x2="-6.35" y2="1.27" width="0.2032" layer="51"/>
+<wire x1="-6.35" y1="1.27" x2="-6.35" y2="-6.35" width="0.2032" layer="51"/>
+<wire x1="-6.35" y1="-6.35" x2="6.35" y2="-6.35" width="0.2032" layer="51"/>
+<wire x1="6.35" y1="-6.35" x2="6.35" y2="1.27" width="0.2032" layer="51"/>
+<wire x1="6.35" y1="1.27" x2="10.922" y2="1.27" width="0.2032" layer="51"/>
+<wire x1="10.922" y1="1.27" x2="10.922" y2="12.7" width="0.2032" layer="51"/>
 </package>
 <package name="XLR-3_MALE">
 <description>&lt;h3&gt;XLR-3 Connector - Package for the NC3MAAH-1 XLR-3 Connector&lt;/h3&gt;
@@ -1035,6 +1048,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-5.08" y="15.24" size="1.27" layer="25" font="vector">&gt;NAME</text>
 <text x="-5.08" y="-12.7" size="1.27" layer="27" font="vector">&gt;VALUE</text>
 <rectangle x1="-11" y1="8.8" x2="11" y2="11.7" layer="51"/>
+<wire x1="-10.922" y1="8.763" x2="-10.922" y2="-5.08" width="0.2032" layer="51"/>
+<wire x1="-10.922" y1="-5.08" x2="-6.35" y2="-5.08" width="0.2032" layer="51"/>
+<wire x1="-6.35" y1="-5.08" x2="-6.35" y2="-10.16" width="0.2032" layer="51"/>
+<wire x1="-6.35" y1="-10.16" x2="6.35" y2="-10.16" width="0.2032" layer="51"/>
+<wire x1="6.35" y1="-10.16" x2="6.35" y2="-5.08" width="0.2032" layer="51"/>
+<wire x1="6.35" y1="-5.08" x2="10.922" y2="-5.08" width="0.2032" layer="51"/>
+<wire x1="10.922" y1="-5.08" x2="10.922" y2="8.89" width="0.2032" layer="51"/>
 </package>
 <package name="1X02_POKEHOME">
 <description>2 pin poke-home connector
@@ -3632,7 +3652,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="U$27" library="buzzard_labels (6)" package="D23" value="" x="14.986" y="57.658"/>
 <element name="U$28" library="buzzard_labels (6)" package="G8" value="" x="14.986" y="23.622"/>
 <element name="LOGO1" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_FLAME_.2" value="SFE_LOGO_NAME_FLAME.2_INCH" x="49.53" y="59.69"/>
-<element name="LOGO2" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_FLAME_.2" value="SFE_LOGO_NAME_FLAME.2_INCH" x="30.48" y="45.72" rot="MR0"/>
+<element name="LOGO2" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_FLAME_.2" value="SFE_LOGO_NAME_FLAME.2_INCH" x="30.48" y="54.61" rot="MR0"/>
 <element name="LOGO3" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="58.42" y="1.27" rot="MR0"/>
 <element name="U$16" library="buzzard_labels (11)" package="#0" value="" x="3.937" y="3.81"/>
 <element name="U$25" library="buzzard_labels (11)" package="#1" value="" x="14.478" y="3.81"/>
@@ -4188,10 +4208,4 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </mfgpreviewcolors>
 </board>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>

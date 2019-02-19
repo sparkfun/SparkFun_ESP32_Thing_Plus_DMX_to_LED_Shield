@@ -19366,10 +19366,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R7" library="SparkFun-Resistors" deviceset="330OHM" device="-0603-1/10W-1%" value="330"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="330OHM" device="-0603-1/10W-1%" value="330"/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="R9" library="SparkFun-Resistors" deviceset="470OHM" device="-0603-1/10W-1%" value="470"/>
-<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
-<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="J3" library="SparkFun-Connectors" deviceset="XLR-3" device="-FEMALE"/>
 <part name="GND-ISO6" library="SparkFun-PowerSymbols" deviceset="GND-ISO" device=""/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
@@ -19407,6 +19404,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="TP2" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
 <part name="TP3" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
 <part name="TP4" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
+<part name="SUPPLY12" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="SUPPLY13" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="SUPPLY14" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19430,7 +19430,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 if this device is
 at the end of 
 a DMX chain</text>
-<text x="124.46" y="177.292" size="1.778" layer="97" font="vector">Vin: 5V</text>
+<text x="124.46" y="177.292" size="1.778" layer="97" font="vector">Vin: 4.5-5.5V</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -19468,10 +19468,7 @@ a DMX chain</text>
 <instance part="R7" gate="G$1" x="137.16" y="86.36"/>
 <instance part="R8" gate="G$1" x="137.16" y="50.8"/>
 <instance part="GND2" gate="1" x="142.24" y="106.68"/>
-<instance part="SUPPLY2" gate="G$1" x="142.24" y="132.08"/>
 <instance part="R9" gate="G$1" x="134.62" y="129.54"/>
-<instance part="SUPPLY3" gate="G$1" x="137.16" y="104.14"/>
-<instance part="SUPPLY4" gate="G$1" x="142.24" y="68.58"/>
 <instance part="J3" gate="G$1" x="15.24" y="53.34"/>
 <instance part="GND-ISO6" gate="G$1" x="30.48" y="40.64"/>
 <instance part="C3" gate="G$1" x="210.82" y="162.56"/>
@@ -19517,6 +19514,9 @@ a DMX chain</text>
 <instance part="TP4" gate="G$1" x="78.74" y="99.06" smashed="yes" rot="R90">
 <attribute name="NAME" x="78.74" y="96.52" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
+<instance part="SUPPLY12" gate="G$1" x="142.24" y="132.08"/>
+<instance part="SUPPLY13" gate="G$1" x="137.16" y="104.14"/>
+<instance part="SUPPLY14" gate="G$1" x="142.24" y="68.58"/>
 </instances>
 <busses>
 </busses>
@@ -19598,27 +19598,6 @@ a DMX chain</text>
 <junction x="154.94" y="170.18"/>
 </segment>
 <segment>
-<pinref part="R9" gate="G$1" pin="2"/>
-<pinref part="U3" gate="G$1" pin="VCC"/>
-<wire x1="139.7" y1="129.54" x2="142.24" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="SUPPLY2" gate="G$1" pin="5V"/>
-<wire x1="142.24" y1="129.54" x2="144.78" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="132.08" x2="142.24" y2="129.54" width="0.1524" layer="91"/>
-<junction x="142.24" y="129.54"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="A"/>
-<wire x1="144.78" y1="101.6" x2="137.16" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="101.6" x2="137.16" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="SUPPLY3" gate="G$1" pin="5V"/>
-</segment>
-<segment>
-<pinref part="SUPPLY4" gate="G$1" pin="5V"/>
-<wire x1="142.24" y1="68.58" x2="142.24" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="U5" gate="G$1" pin="A"/>
-<wire x1="142.24" y1="66.04" x2="144.78" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="J6" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="25.4" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="SUPPLY6" gate="G$1" pin="5V"/>
@@ -19673,6 +19652,27 @@ a DMX chain</text>
 <wire x1="35.56" y1="101.6" x2="35.56" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="114.3" x2="48.26" y2="114.3" width="0.1524" layer="91"/>
 <junction x="48.26" y="114.3"/>
+</segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="2"/>
+<pinref part="U3" gate="G$1" pin="VCC"/>
+<wire x1="139.7" y1="129.54" x2="142.24" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="129.54" x2="144.78" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="132.08" x2="142.24" y2="129.54" width="0.1524" layer="91"/>
+<junction x="142.24" y="129.54"/>
+<pinref part="SUPPLY12" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="A"/>
+<wire x1="144.78" y1="101.6" x2="137.16" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="101.6" x2="137.16" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="SUPPLY13" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<wire x1="142.24" y1="68.58" x2="142.24" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="U5" gate="G$1" pin="A"/>
+<wire x1="142.24" y1="66.04" x2="144.78" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="SUPPLY14" gate="G$1" pin="3.3V"/>
 </segment>
 </net>
 <net name="15" class="0">

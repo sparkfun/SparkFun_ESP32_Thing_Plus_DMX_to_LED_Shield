@@ -166,6 +166,7 @@
 <text x="27.94" y="-7.62" size="1.778" layer="51" font="vector">Andy England</text>
 <dimension x1="80.01" y1="68.58" x2="19.05" y2="68.58" x3="49.53" y3="69.85" textsize="1.778" layer="47" unit="inch"/>
 <dimension x1="80.01" y1="68.58" x2="80.01" y2="0" x3="88.9" y3="34.29" textsize="1.778" layer="47" unit="inch"/>
+<text x="79.502" y="0.381" size="1.27" layer="16" font="vector" ratio="15" rot="MR0">v01</text>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
