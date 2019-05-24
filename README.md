@@ -23,7 +23,9 @@ License Information
 
 This product is _**open source**_! 
 
-Please review the LICENSE.md file for license information. 
+Please review the LICENSE.md file for license information.
+
+If you have any questions or concerns on licensing, please visit the [SparkFun Forum](https://forum.sparkfun.com/index.php) and post a topic.
 
 Distributed as-is; no warranty is given.
 
